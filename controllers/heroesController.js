@@ -8,10 +8,19 @@ const heroes = funciones.getHeroes();
 let heroesController = {
 
     heroes:(req, res) => {
-  
+     
+    let heroesO= heroes.map(function (heroe){
+     let resultado = ' '; 
+     resultado= resultado  + '-'+  heroe.id+':' +'-'+heroe.nombre; 
+     return resultado  
+     
+          
+       });
+       let heroesOrd = heroesO.join('\n\n') 
+       res.send(heroesOrd);
+   },
+            
          
-       res.send(heroes)
-    },
 
 
 
