@@ -1,8 +1,8 @@
 
 
-const fs = require("fs");
-let heroes = JSON.parse(fs.readFileSync(__dirname + '/data/heroes.json', 'utf-8'));
+const funciones = require ('../funciones')
 
+const heroes = funciones.getHeroes();
 
 
 let heroesController = {
